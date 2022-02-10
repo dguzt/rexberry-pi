@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ShowNewReleasesService } from './show-new-releases.service';
+import { ShowNewReleasesService } from './application/show-new-releases.service';
 
 @Module({
   providers: [ShowNewReleasesService],
