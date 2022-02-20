@@ -6,10 +6,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider } from '@emotion/react';
 import theme from 'styles/theme';
 import createEmotionCache from 'styles/createEmotionCache';
+import 'styles/globals.css';
 
 const clientSideEmotionCache = createEmotionCache();
 
-export default function App(props) {
+function App(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
   return (
@@ -31,3 +32,5 @@ App.propTypes = {
   emotionCache: PropTypes.object,
   pageProps: PropTypes.object.isRequired,
 };
+
+export default App;
